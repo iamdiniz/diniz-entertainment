@@ -1,4 +1,27 @@
 <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" style="padding-top: 40px;
     padding-left: 2%; padding-right: 2%;">
-      <mat-tab label="Games">Content 1</mat-tab>
+      <mat-tab label="Games">
+        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
+            <div style="margin: 0.5%;">
+
+              <mat-card class="example-card"
+              fxFlex="0 1 calc(33.3% - 11px)"
+              fxFlex.lt-md="0 1 calc(50% - 11px)"
+              fxFlex.lt-sm="100%"> <!-- Quando for em telas menores, o md é quando for um pouco maior, dividir ela em 50 (2cards por linhas) e quando for em telas maiores fxFlex vai se encaixar 3 cards -->
+                <mat-card-header>
+                </mat-card-header>
+
+                <mat-card-content>
+                  <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                  </p>
+                </mat-card-content>
+              </mat-card>
+
+            </div>
+            
+        </div>
+      </mat-tab>
 </mat-tab-group>
