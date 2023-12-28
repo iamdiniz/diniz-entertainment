@@ -1,15 +1,26 @@
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" style="padding-top: 40px;
-    padding-left: 2%; padding-right: 2%;">
+<mat-tab-group style="padding-top: 40px; padding-left: 2%; padding-right: 2%;">
       <mat-tab label="Games">
-        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
-            <div style="margin: 0.5%;">
+        <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding: 2%;">
+            <ng-container *ngFor="let game of games" style="margin: 0.5%;">
 
-              <mat-card class="example-card"
+              <mat-card class="mat-card-game"
               fxFlex="0 1 calc(33.3% - 11px)"
               fxFlex.lt-md="0 1 calc(50% - 11px)"
-              fxFlex.lt-sm="100%"> <!-- Quando for em telas menores, o md é quando for um pouco maior, dividir ela em 50 (2cards por linhas) e quando for em telas maiores fxFlex vai se encaixar 3 cards -->
-                <mat-card-header>
-                </mat-card-header>
+              fxFlex.lt-sm="100%">
+
+                <mat-card-title class="mat-card-title-game">
+                  <div class="row">
+                    <p>
+                      <span style="font-size: 0.9rem;" fxFlex="70" fxLayoutAlign="start center">{{ game.name }}</span>
+                      <span fxFlex></span>
+                      <span style="font-size: 0.7rem;" fxFlex="25" fxLayoutAlign="end center">{{ game.year }}</span>
+                    </p>
+                    <p style="font-size: 0.7rem;">
+                      Plataforma: <span>{{ game.platforms }}</span>
+                      <img src="{{ game.img }}" alt="{{ game.name }}" style="max-width: 100%; max-height: 100%;">
+                    </p>
+                  </div>
+                </mat-card-title>
 
                 <mat-card-content>
                   <p>
@@ -20,8 +31,8 @@
                 </mat-card-content>
               </mat-card>
 
-            </div>
-            
+            </ng-container>
+
         </div>
       </mat-tab>
 </mat-tab-group>

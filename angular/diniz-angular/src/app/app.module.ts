@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,6 +20,7 @@ import { HomeComponent } from './views/home/home.component';
     GamesListComponent
   ],
   imports: [
+    FlexLayoutModule,
     MatCardModule,
     MatTabsModule,
     MatButtonModule,
