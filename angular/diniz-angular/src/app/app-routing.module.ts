@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', pathMatch: 'full' ,redirectTo: 'games' },
+  { path: 'games',
+  loadChildren: () => import('./games/games.module').then(m => m.GamesModule) }
 ];
 
 @NgModule({
