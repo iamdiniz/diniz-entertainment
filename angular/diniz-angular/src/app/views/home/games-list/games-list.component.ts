@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../model/game';
+import { GamesService } from '../../services/games.service';
 
 @Component({
   selector: 'app-games-list',
@@ -8,17 +9,14 @@ import { Game } from '../model/game';
 })
 export class GamesListComponent implements OnInit {
 
-  games: Game[] = [
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'}
-  ];
+  games: Game[] = [];
 
-  constructor() {}
+  constructor(private gamesService: GamesService) {
+
+  }
 
   ngOnInit(): void {
+    this.games = this.gamesService.list();
   }
 
 }

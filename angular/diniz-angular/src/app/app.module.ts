@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -20,6 +21,7 @@ import { HomeComponent } from './views/home/home.component';
     GamesListComponent
   ],
   imports: [
+    HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
     MatTabsModule,
