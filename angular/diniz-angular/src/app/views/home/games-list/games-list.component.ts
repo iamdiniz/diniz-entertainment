@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Game } from '../model/game';
 import { GamesService } from '../../services/games.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-games-list',
@@ -9,14 +10,14 @@ import { GamesService } from '../../services/games.service';
 })
 export class GamesListComponent implements OnInit {
 
-  games: Game[] = [];
+  games: Observable<Game[]>;
 
   constructor(private gamesService: GamesService) {
-
+    this.games = this.gamesService.list();
   }
 
   ngOnInit(): void {
-    this.games = this.gamesService.list();
+
   }
 
 }
