@@ -10,10 +10,10 @@ import { Observable } from 'rxjs';
 })
 export class GamesListComponent implements OnInit {
 
-  games: Observable<Game[]>;
+  games$: Observable<Game[]>;
 
   constructor(private gamesService: GamesService) {
-    this.games = this.gamesService.list();
+    this.games$ = this.gamesService.list();
   }
 
   ngOnInit(): void {

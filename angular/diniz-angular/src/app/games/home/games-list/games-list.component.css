@@ -20,4 +20,10 @@
   border-radius: 8px;  /* Ajuste este valor conforme necessário */
 }
 
-
+.loading-spinner {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

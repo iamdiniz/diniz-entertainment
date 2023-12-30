@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Game } from '../home/model/game';
 import { HttpClient } from '@angular/common/http';
-import { first, tap } from 'rxjs';
+import { delay, first, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,7 +15,8 @@ export class GamesService {
   list(){
     return this.httpClient.get<Game[]>(this.API)
     .pipe(
-      first(),
+      //first(),
+      delay(5000),
       tap(games => console.log(games))
     );
   }
