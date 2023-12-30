@@ -10,13 +10,20 @@
 
                 <mat-card-title class="mat-card-title-game">
                   <div class="row">
+
                     <p>
+                      <mat-toolbar color="primary">
                       <span style="font-size: 0.9rem;" fxFlex="70" fxLayoutAlign="start center">{{ game.name }}</span>
                       <span fxFlex></span>
-                      <span style="font-size: 0.7rem;" fxFlex="25" fxLayoutAlign="end center">{{ game.year }}</span>
+                      <span style="font-size: 0.8rem;" fxFlex="25" fxLayoutAlign="end center">{{ game.year }}</span>
+                    </mat-toolbar>
                     </p>
-                    <p style="font-size: 0.7rem;">
-                      Plataforma: <span>{{ game.platforms }}</span>
+
+                    <p style="font-size: 0.8rem; margin-bottom: 0px; padding-left: 8px;">
+                      <span>Categoria: {{ game.category }}</span>
+                    </p>
+                    <p style="font-size: 0.8rem;">
+                      <span style="padding-left: 8px;">Plataforma: {{ game.platforms }}</span>
                       <img src="{{ game.img }}" alt="{{ game.name }}" style="max-width: 100%; max-height: 100%;">
                     </p>
                   </div>

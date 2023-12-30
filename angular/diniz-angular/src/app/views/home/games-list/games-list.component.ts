@@ -9,11 +9,11 @@ import { Game } from '../model/game';
 export class GamesListComponent implements OnInit {
 
   games: Game[] = [
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'ps2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'ps2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'ps2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'ps2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg'},
-    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'ps2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg'}
+    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
+    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
+    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
+    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'},
+    { id: '1', name: 'God of War', description: 'Action Game', platforms: 'Playstation 2', year: 2001, img: 'https://meups.com.br/wp-content/uploads/2018/03/God-of-War_Fantasma-de-Esparta.jpg', category: 'Ação'}
   ];
 
   constructor() {}
