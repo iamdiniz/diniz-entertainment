@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from '../model/game';
+import { MatDialog } from '@angular/material/dialog';
+import { catchError, Observable, of } from 'rxjs';
+import { ErrorDiaogComponent } from 'src/app/shared/components/error-diaog/error-diaog.component';
+
 import { GamesService } from '../../services/games.service';
-import { Observable } from 'rxjs';
+import { Game } from '../model/game';
 
 @Component({
   selector: 'app-games-list',
@@ -12,12 +15,24 @@ export class GamesListComponent implements OnInit {
 
   games$: Observable<Game[]>;
 
-  constructor(private gamesService: GamesService) {
-    this.games$ = this.gamesService.list();
+  constructor(private gamesService: GamesService,
+    public dialog: MatDialog) {
+    this.games$ = this.gamesService.list()
+      .pipe(
+        catchError(error => {
+          this.onError('Erro ao carregar os jogos.');
+          return of([])
+        })
+      )
   }
 
   ngOnInit(): void {
+  }
 
+  onError(errorMsg: string) {
+    this.dialog.open(ErrorDiaogComponent, {
+      data: errorMsg
+    });
   }
 
 }
