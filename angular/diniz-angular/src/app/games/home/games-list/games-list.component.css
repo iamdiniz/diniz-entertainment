@@ -27,3 +27,26 @@
   align-items: center;
   justify-content: center;
 }
+
+.img-config {
+  height: 200px;
+  object-fit: cover;
+  width: 300px;
+  border:2px solid #3f51b5;
+  margin: 4px;
+}
+
+.description-container {
+  max-height: 100px; /* ou ajuste conforme necessário */
+  overflow: hidden;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3; /* ou ajuste conforme necessário para o número desejado de linhas */
+  max-height: 3em;
+  overflow: auto;
+}
