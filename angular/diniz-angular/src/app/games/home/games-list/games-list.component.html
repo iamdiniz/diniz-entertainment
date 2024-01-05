@@ -28,7 +28,7 @@
                       style="font-size: 0.8rem"
                       fxFlex="25"
                       fxLayoutAlign="end center"
-                      >{{ game.year }}</span
+                      >{{ game.releaseYear }}</span
                     >
                   </mat-toolbar>
                 </p>
@@ -67,6 +67,14 @@
                 </div>
               </div>
             </mat-card-content>
+            <mat-card-actions>
+              <button mat-icon-button color="primary">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-icon-button color="warn">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </mat-card-actions>
           </mat-card>
         </ng-container>
       </div>

@@ -3,7 +3,7 @@ export interface Game{
   name: string;
   category: string;
   platforms: string;
-  year: number;
+  releaseYear: number;
   description: string;
   img: string;
 }

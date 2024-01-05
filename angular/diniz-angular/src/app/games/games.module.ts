@@ -7,11 +7,13 @@ import { SharedModule } from '../shared/shared.module';
 import { GamesRoutingModule } from './games-routing.module';
 import { GamesListComponent } from './home/games-list/games-list.component';
 import { HomeComponent } from './home/home.component';
+import { GameFormComponent } from './home/game-form/game-form.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    GamesListComponent
+    GamesListComponent,
+    GameFormComponent
   ],
   imports: [
     AppMaterialModule,
